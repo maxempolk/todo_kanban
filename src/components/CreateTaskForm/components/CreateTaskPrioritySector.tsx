@@ -1,13 +1,13 @@
-import type { priority } from "../../../types/priority"
+import type { TaskPriority } from '../../../types/taskPriority';
 
-interface CreateTaskPrioritySectorProps{
-  priority: priority
-  setPriority: (value: priority) => void
+interface CreateTaskPrioritySectorProps {
+  priority: TaskPriority;
+  setPriority: (value: TaskPriority) => void;
 }
 
 function CreateTaskPrioritySector({
   priority,
-  setPriority
+  setPriority,
 }: CreateTaskPrioritySectorProps) {
   return (
     <>
@@ -47,7 +47,7 @@ function CreateTaskPrioritySector({
         </button>
       </div>
     </>
-  )
+  );
 }
 
-export default CreateTaskPrioritySector
+export default CreateTaskPrioritySector;

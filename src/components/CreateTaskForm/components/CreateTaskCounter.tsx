@@ -1,12 +1,9 @@
-interface CreateTaskCounterProps{
-  charCount: number 
-  maxChars: number
+interface CreateTaskCounterProps {
+  charCount: number;
+  maxChars: number;
 }
 
-function CreateTaskCounter({
-  charCount,
-  maxChars
-}: CreateTaskCounterProps) {
+function CreateTaskCounter({ charCount, maxChars }: CreateTaskCounterProps) {
   return (
     <>
       <div className="flex items-center gap-2">
@@ -52,14 +49,17 @@ function CreateTaskCounter({
             className="hidden sm:block"
           />
         </svg>
+
         {charCount > maxChars * 0.8 && (
-          <span className={`text-xs sm:text-sm ${charCount > maxChars * 0.9 ? 'text-red-500' : 'text-gray-500'}`}>
+          <span
+            className={`text-xs sm:text-sm ${charCount > maxChars * 0.9 ? 'text-red-500' : 'text-gray-500'}`}
+          >
             {maxChars - charCount}
           </span>
         )}
       </div>
     </>
-  )
+  );
 }
 
-export default CreateTaskCounter
+export default CreateTaskCounter;
